@@ -1,37 +1,68 @@
 # MDP REPRESENTATION
 
 ## AIM:
-Write your aim here
+To represent a Markov Decision Process(MDP) problem in the following ways.
+
+1.Text representation
+2.Graphical representation
+3.Python - Dictonary representation
 
 ## PROBLEM STATEMENT:
 
-### Problem Description
-Write your answer here
+### The problem is to develop a Reinforcement Learning model for product detection in a manufacturing factory. The model should determine whether a product is ready to be exported or faulty based on its features. The goal is to optimize the production process and reduce the number of faulty products while maximizing the number of products ready for export.
 
-### State Space
-Write your answer here
+### State Space:
+{F,J,E} -> {0,1,2}
 
-### Sample State
-Write your answer here
+where,
 
-### Action Space
-Write your answer here
+F -> Faulty
+J-Juction(decision making state)
+E -> Export
+Sample State:
+Dimensions: (Length, Width, Height) = (10 cm, 5 cm, 2 cm). Weight: 100 grams. Color: Blue.
 
-### Sample Action
-Write your answer here
+### Action Space:
+{F,E} -> {0,1} where, "E->Export" , "F->Mark as Faulty"
 
-### Reward Function
-Write your answer here
+### Sample Action:
+E-> 1
+product is ready for Export.
 
-### Graphical Representation
-Write your answer here
+### Reward Function:
+R = { +10 for correctly exporting a ready product, -10 for exporting a faulty product}
+
+### Graphical Representation:
+
+![1](https://github.com/user-attachments/assets/e8648926-c8f8-4eb9-8f08-46527d6718c9)
 
 ## PYTHON REPRESENTATION:
-Write your code here
+P = {
+    0:{
+        0: [(1.0,0,0.0,True)],
+        1: [(1.0,0,0.0,True)]
+    },
+    1:{
+        0: [(1.0,0,0.0,True)],
+        1: [(1.0,2,1.0,True)]
+    },
+    2:{
+        0: [(1.0,2,0.0,True)],
+        1: [(1.0,2,0.0,True)]
+    }
+}
 
 ## OUTPUT:
-Write your Python output here
+{0: {0: [(1.0, 0, 0.0, True)], 1: [(1.0, 0, 0.0, True)]},
+ 1: {0: [(1.0, 0, 0.0, True)], 1: [(1.0, 2, 1.0, True)]},
+ 2: {0: [(1.0, 2, 0.0, True)], 1: [(1.0, 2, 0.0, True)]}}
 
 ## RESULT:
+Thus the given Markov Decision Process(MDP) problem is represented in the following ways.
+
+Text representation
+Graphical representation
+Python - Dictonary representation
+
 Write your output here
 
